@@ -1,0 +1,163 @@
+:root {
+  --toxic-green-color: #00ff66;
+  --basic-green-color: #009933;
+  --bg-color: #0f172a;
+  --dark-color: #0f172a;
+  --white-color: #f0fdf4;
+  --blue-color: #1d4ed8;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 100vh;
+  font-family: "Rubik", serif;
+  font-weight: 700;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+}
+
+.header__container {
+  align-content: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.header__decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  overflow-x: hidden;
+}
+
+.decor__el-1,
+.decor__el-2,
+.decor__el-3 {
+  position: absolute;
+  border: 1px solid var(--toxic-green-color);
+  border-radius: 50%;
+  mix-blend-mode: screen; /* Эффект смешивания */
+}
+
+.decor__el-1 {
+  width: 670px;
+  height: 670px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.8;
+}
+
+.decor__el-2 {
+  width: 910px;
+  height: 910px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.6;
+}
+
+.decor__el-3 {
+  width: 1128px;
+  height: 1128px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0.4;
+}
+
+.header__inner {
+}
+
+.header__nav {
+}
+
+.nav__inner {
+}
+
+.nav__home {
+}
+
+.nav__works {
+}
+
+.nav__about {
+}
+
+.header__title-containet {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 120px;
+  width: 832px;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  text-align: center;
+  color: var(--toxic-green-color);
+  text-shadow: 0 0 15px rgba(0, 255, 102, 0.5), 0 0 10px rgba(0, 255, 102, 0.5),
+    5px 5px 1px rgba(0, 255, 102, 0);
+}
+
+.header__sub-title {
+  position: absolute;
+  content: "";
+  top: 130px;
+  letter-spacing: 0.1em;
+  font-size: 20px;
+  color: var(--blue-color);
+}
+
+.header__btn {
+}
