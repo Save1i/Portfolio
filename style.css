@@ -26,7 +26,7 @@ body {
   font-family: "Rubik", serif;
   font-weight: 700;
   font-style: normal;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 h1,
@@ -61,6 +61,7 @@ body {
 .header__container {
   align-content: center;
   position: relative;
+  z-index: 1;
   width: 100%;
   height: 100vh;
 }
@@ -75,14 +76,14 @@ body {
   justify-content: center;
   align-items: center;
   z-index: -1;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .decor__el-1,
 .decor__el-2,
 .decor__el-3 {
   position: absolute;
-  border: 1px solid var(--toxic-green-color);
+  border: 1px solid rgba(0, 255, 102, 0.8);
   border-radius: 50%;
   mix-blend-mode: screen; /* Эффект смешивания */
 }
@@ -90,28 +91,96 @@ body {
 .decor__el-1 {
   width: 670px;
   height: 670px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 0.8;
 }
 
 .decor__el-2 {
   width: 910px;
   height: 910px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 0.6;
 }
 
 .decor__el-3 {
   width: 1128px;
   height: 1128px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 0.4;
+}
+
+.decor__img {
+  height: 55px;
+  width: 55px;
+}
+
+.decor__el-c {
+  position: relative;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  background-color: #020617;
+  border: 2px solid rgba(0, 255, 102, 0.2);
+  border-radius: 100%;
+  box-shadow: 0 0 20px 5px rgba(0, 153, 51, 0.25), inset 0 0 50px 10px rgba(0, 153, 51, 0.2);
+  transition: all 0.2s ease;
+}
+
+.decor__el--active {
+  box-shadow: 0 0 40px 5px rgba(0, 153, 51, 0.3), inset 0 0 100px 10px rgba(0, 153, 51, 0.25);
+}
+
+.decor__el-js {
+  position: absolute;
+  content: "";
+  top: 260px;
+  left: 10px;
+}
+
+.decor__el-html {
+  position: absolute;
+  content: "";
+  top: 690px;
+  left: -21px;
+}
+
+.decor__el-tail {
+  position: absolute;
+  content: "";
+  top: 645px;
+  left: 1060px;
+}
+
+.decor__el-webpack {
+  position: absolute;
+  content: "";
+  top: 343px;
+  left: 1050px;
+}
+
+.decor__el-css {
+  position: absolute;
+  content: "";
+  top: 400px;
+  left: -50px;
+}
+
+.decor__el-ts {
+  position: absolute;
+  content: "";
+  top: 718px;
+  left: 78px;
+}
+
+.decor__el-jest {
+  position: absolute;
+  content: "";
+  top: 678px;
+  left: 764px;
+}
+
+.decor__el-react {
+  position: absolute;
+  content: "";
+  top: 110px;
+  left: 750px;
 }
 
 .header__inner {
