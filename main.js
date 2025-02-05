@@ -75,3 +75,43 @@ jsLogos.forEach((jsLogo) => {
     }
   });
 });
+
+// const worksCards = document.querySelectorAll(".works__card");
+// const worksImgs = document.querySelectorAll(".works__img");
+
+// // Функция для изменения ширины
+// const changeWidth = (elements, delta) => {
+//   elements.forEach((img) => {
+//     const currentWidth = parseInt(window.getComputedStyle(img).getPropertyValue("width"));
+//     img.style.width = `${currentWidth + delta}px`;
+//   });
+// };
+
+// // Добавляем события только для карточек
+// worksCards.forEach((card) => {
+//   card.addEventListener("mouseover", (event) => {
+//     if (event.target === card) {
+//       // Убедимся, что событие сработало именно на карточке
+//       changeWidth(worksImgs, 10);
+//     }
+//   });
+
+//   card.addEventListener("mouseout", (event) => {
+//     if (event.target === card) {
+//       // Убедимся, что событие сработало именно на карточке
+//       changeWidth(worksImgs, -10);
+//     }
+//   });
+// });
+
+document.querySelector(".mail__text").addEventListener("click", function () {
+  const textToCopy = this.dataset.text;
+
+  navigator.clipboard
+    .writeText(textToCopy)
+    .then(() => {
+      this.textContent = "Скопировано!";
+      setTimeout(() => (this.textContent = textToCopy), 2000);
+    })
+    .catch((err) => console.error("Ошибка при копировании:", err));
+});
