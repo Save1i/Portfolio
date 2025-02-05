@@ -865,6 +865,12 @@ body {
   box-shadow: 0 0 40px 5px rgba(0, 153, 51, 0.3), inset 0 0 100px 10px rgba(0, 153, 51, 0.25);
 }
 
+.form__btn:disabled:hover {
+  color: #1e293b;
+  border: 2px solid #1e293b;
+  box-shadow: none;
+}
+
 .form__btn-dec {
   position: absolute;
   content: "";

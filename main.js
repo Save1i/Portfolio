@@ -118,24 +118,20 @@ document.querySelector(".mail__text").addEventListener("click", function () {
 
 /////
 
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+const form = document.getElementById("contact-form");
 
-  const form = e.target;
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  document.querySelector(".form__btn").disabled = true;
+
   const formData = {
     name: form.name.value,
     mail: form.mail.value,
     message: form.message.value,
-    recaptchaToken: grecaptcha.getResponse(), // получаем токен reCAPTCHA
   };
 
-  if (!formData.recaptchaToken) {
-    alert("Пожалуйста, подтвердите, что вы не робот.");
-    return;
-  }
-
   fetch(
-    "https://script.google.com/macros/s/AKfycbwmeAv88NdHvE33WUAGOl2lWMHa194ndDkme0y3T1FkAT7iadUs6CtyUR9XAZ-m53zA/exec",
+    "https://script.google.com/macros/s/AKfycbzPc2LyNhrl2toaKiG9kyEjQK1FtExbOPV4VNPfIAh20i1w8oZeC7CScYKtiCJqPZVX/exec",
     {
       method: "POST",
       contentType: "application/json",
@@ -145,15 +141,17 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     .then((response) => response.json())
     .then((data) => {
       if (data.result === "success") {
-        alert("Сообщение отправлено!");
+        alert("Данные успешно отправлены!");
+        document.querySelector(".form__btn").disabled = false;
         form.reset();
-        grecaptcha.reset(); // сбросить reCAPTCHA
       } else {
-        alert("Ошибка при отправке. Попробуйте снова.");
+        document.querySelector(".form__btn").disabled = false;
+        alert("Ошибка при отправке данных.");
       }
     })
     .catch((error) => {
       console.error("Ошибка:", error);
-      alert("Ошибка сети.");
+      alert("Ошибка при отправке.");
+      document.querySelector(".form__btn").disabled = false;
     });
 });
