@@ -115,3 +115,45 @@ document.querySelector(".mail__text").addEventListener("click", function () {
     })
     .catch((err) => console.error("Ошибка при копировании:", err));
 });
+
+/////
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = {
+    name: form.name.value,
+    mail: form.mail.value,
+    message: form.message.value,
+    recaptchaToken: grecaptcha.getResponse(), // получаем токен reCAPTCHA
+  };
+
+  if (!formData.recaptchaToken) {
+    alert("Пожалуйста, подтвердите, что вы не робот.");
+    return;
+  }
+
+  fetch(
+    "https://script.google.com/macros/s/AKfycbwmeAv88NdHvE33WUAGOl2lWMHa194ndDkme0y3T1FkAT7iadUs6CtyUR9XAZ-m53zA/exec",
+    {
+      method: "POST",
+      contentType: "application/json",
+      body: JSON.stringify(formData),
+    }
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.result === "success") {
+        alert("Сообщение отправлено!");
+        form.reset();
+        grecaptcha.reset(); // сбросить reCAPTCHA
+      } else {
+        alert("Ошибка при отправке. Попробуйте снова.");
+      }
+    })
+    .catch((error) => {
+      console.error("Ошибка:", error);
+      alert("Ошибка сети.");
+    });
+});
