@@ -116,7 +116,7 @@ document.querySelector(".mail__text").addEventListener("click", function () {
     .catch((err) => console.error("Ошибка при копировании:", err));
 });
 
-/////
+// Get in touch //
 
 const form = document.getElementById("contact-form");
 
@@ -155,3 +155,11 @@ form.addEventListener("submit", function (e) {
       document.querySelector(".form__btn").disabled = false;
     });
 });
+
+//
+
+const footerDate = document.querySelector(".footer__date");
+
+const date = new Date().getFullYear();
+
+footerDate.textContent = date;
