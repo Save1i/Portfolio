@@ -107,7 +107,7 @@
     height: fit-content;
   }
 
-  .works__card:active.works__bs--small {
+  .works__card.works__bs--small .links__big:active {
     background-color: #4f46e5;
     box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
   }
