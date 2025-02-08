@@ -123,23 +123,24 @@
     filter: brightness(90%);
   }
 
-  /* Добавляем небольшую задержку перед переходом */
+  /* Скрываем ссылку на 0.9s */
   .works__link {
     position: absolute;
     inset: 0; /* Растягиваем ссылку на весь блок */
     display: block;
     z-index: 10;
-    animation: delayLink 0.9s steps(1, end);
+    visibility: hidden; /* Скрываем ссылку */
+    animation: showLink 0.9s linear forwards;
   }
 
-  /* Через 300мс срабатывает переход */
-  @keyframes delayLink {
+  /* Показываем ссылку после 0.9s */
+  @keyframes showLink {
     0% {
-      pointer-events: none;
-    } /* Блокируем клик */
+      visibility: hidden;
+    }
     100% {
-      pointer-events: auto;
-    } /* Разрешаем клик через 0.3s */
+      visibility: visible;
+    }
   }
 
   .education__item {
