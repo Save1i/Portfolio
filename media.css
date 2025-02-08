@@ -304,11 +304,6 @@
   .form__btn-dec {
     right: -7px;
   }
-
-  .works__card:active.works__bs--small {
-    background-color: #4f46e5;
-    box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
-  }
 }
 
 @media (max-width: 770px) {
