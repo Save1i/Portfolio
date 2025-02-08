@@ -117,6 +117,50 @@
     filter: brightness(90%);
   }
 
+  .works__card.works__sg--big.animate {
+    box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .works__card.animate .works__img--sg {
+    width: 78%;
+    filter: brightness(90%);
+  }
+
+  .works__card.works__tl--big.animate {
+    background-color: #f43f5e;
+    box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
+  }
+  .works__card.animate .works__img--tl {
+    width: 87%;
+    filter: brightness(90%);
+  }
+  .works__card.animate .works__img--wa {
+    width: 78%;
+    filter: brightness(90%);
+  }
+  .works__card.animate.works__wa--small {
+    background-color: #fb923c;
+    box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
+  }
+  .works__card.animate .works__img--sc {
+    width: 78%;
+    filter: brightness(90%);
+  }
+  .works__card.animate.works__sc--small {
+    background-color: #4f46e5;
+    box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
+  }
+  .works__card.animate.works__mc--big {
+    background-color: #16a34a;
+    box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .works__card.animate .works__img--mc {
+    width: 86%;
+    filter: brightness(90%);
+  }
+
   .education__item {
     max-width: 750px;
   }
