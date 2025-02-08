@@ -10,6 +10,8 @@
     />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media.css" />
+
   </head>
   <body>
     <header class="header">
@@ -64,7 +66,7 @@
             <p class="header__sub-title">I code with my soul so that your projects stand out</p>
           </div>
           <div class="header__action">
-            <button class="header__btn">Contact Me</button>
+            <a href="#contact" class="header__btn">Contact Me</a>
           </div>
         </div>
       </div>
@@ -75,7 +77,6 @@
           <div class="title">
             <h2 class="section__title">Works</h2>
             <span class="title__decorate"></span>   
-  
           </div>
 
           <div class="works__container">
@@ -216,11 +217,11 @@
               <div class="item__main">
                 <div class="decor__el-i">
                   <p class="decor__el_text">1</p>
-                  <span class="decor__line"></span>
+                  <span class="decor__line first"></span>
                 </div>
                 <div class="text__container">
                   <div class="text__main">
-                    <p class="item__title">Общее среднее образование 11 классов</p>
+                    <p class="item__title">Общее среднее образование</p>
                     <p class="item__date">2009 - 2021</p>
                   </div>
                 </div>
@@ -231,7 +232,7 @@
               <div class="item__main">
                 <div class="decor__el-i">
                   <p class="decor__el_text">2</p>
-                  <span class="decor__line"></span>
+                  <span class="decor__line second"></span>
                 </div>
 
                 <div class="text__container">
@@ -249,7 +250,7 @@
               <div class="item__main">
                 <div class="decor__el-i">
                   <p class="decor__el_text">3</p>
-                  <span class="decor__line"></span>
+                  <span class="decor__line third"></span>
                 </div>
                 <div class="text__container">
                   <div class="text__main">
@@ -280,8 +281,8 @@
           </div>
         </div>
       </section>
-      
-      <section class="contact">
+
+      <section class="contact" id="contact">
         <div class="contact__inner">
           <div class="title">   
             <h2 class="section__title">Get in touch</h2>
@@ -322,8 +323,11 @@
                   <input class="name__inp form__inp" type="text" name="name" placeholder="name" required />
                   <input class="mail__inp form__inp" type="email" name="mail" placeholder="email" required />
                   <textarea class="message__inp form__inp" name="message" placeholder="message" required></textarea>
-                  <button class="form__btn" type="submit">send</button>
-                  <span class="form__btn-dec"></span>
+                  <div class="form__btn_inner">
+                    <button class="form__btn" type="submit">send</button>
+                    <span class="form__btn-dec"></span>
+                  </div>
+
                 </form>
                 </div>
               </div>
@@ -331,14 +335,15 @@
           
         </div>
       </section>
-
     </main>
     <footer class="footer">
       <div class="footer__inner">
         <p class="footer__text">©</p>
-        <p class="footer__date"></p>
-        <p class="footer__text">- All rights reserved, web design and development -</p>
-        <a class="footer__link" href="https://github.com/Save1i" target="_blank">Saveli</a>
+        <p class="footer__date">2025</p>
+        <p class="footer__text">
+          - All rights reserved, web design and development -
+          <a class="footer__link" href="https://github.com/Save1i" target="_blank">Saveli</a>
+        </p>
       </div>
     </footer>
     <script src="main.js"></script>

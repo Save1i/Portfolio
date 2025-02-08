@@ -27,7 +27,6 @@ body {
   font-family: "Rubik", serif;
   font-weight: 700;
   font-style: normal;
-  /* overflow-x: hidden; */
 }
 
 input,
@@ -102,7 +101,7 @@ body {
   position: absolute;
   border: 1px solid rgba(0, 255, 102, 0.8);
   border-radius: 50%;
-  mix-blend-mode: screen; /* Эффект смешивания */
+  mix-blend-mode: screen;
 }
 
 .decor__el-1 {
@@ -126,7 +125,7 @@ body {
 }
 
 .decor__el-c {
-  position: relative;
+  /* position: relative; */
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -313,12 +312,13 @@ body {
 }
 
 .works {
-  width: 1128px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .works__inner {
+  width: 100%;
 }
 
 .title {
@@ -359,6 +359,7 @@ body {
   grid-template-columns: repeat(5, 226px);
   grid-template-rows: repeat(3, 600px);
   row-gap: 24px;
+  justify-content: center;
 }
 
 .links__small {
@@ -367,8 +368,8 @@ body {
   top: 0;
   left: 0;
   z-index: 20;
-  height: 600px;
-  width: 464px;
+  height: 100%;
+  width: 100%;
 }
 
 .links__big {
@@ -377,8 +378,8 @@ body {
   top: 0;
   left: 0;
   z-index: 20;
-  height: 600px;
-  width: 708px;
+  height: 100%;
+  width: 100%;
 }
 
 .works__bs--small {
@@ -683,13 +684,17 @@ body {
 
 .contact {
   margin-top: 110px;
-  width: 1128px;
+  max-width: 1128px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 25px;
 }
 
 .contact__inner {
+  width: 100%;
 }
 
 .contact__title {
@@ -714,6 +719,8 @@ body {
   border: 2px solid var(--basic-green-color);
   border-radius: 1000px;
   height: 300px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .contact__info {
@@ -733,9 +740,6 @@ body {
 
 .contact__info-container {
   margin-top: 35px;
-}
-
-.contact__mail {
 }
 
 .mail__title {
@@ -803,12 +807,12 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
 }
 
 .form__inp {
   border: 2px solid rgba(0, 153, 51, 0.8);
   border-radius: 50px;
-  width: 372px;
   height: 50px;
   background-color: #1f2937;
   padding: 10px 0 12px 20px;
@@ -818,6 +822,7 @@ body {
   color: var(--basic-green-color);
   display: flex;
   align-items: center;
+  margin-right: 175px;
 }
 
 .form__inp::placeholder {
@@ -849,6 +854,12 @@ body {
   height: 50px;
   cursor: pointer;
   transition: all 0.2s ease;
+  position: relative;
+}
+
+.form__btn_inner {
+  position: relative;
+  width: 160px;
 }
 
 .form__btn:hover {
@@ -868,28 +879,33 @@ body {
 .form__btn-dec {
   position: absolute;
   content: "";
-  bottom: 14px;
-  right: 215px;
+  bottom: 15px;
+  right: 3px;
   height: 20px;
   width: 174px;
+
   background-color: var(--bg-color);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .education {
-  max-width: 1128px;
   margin-top: 100px;
+}
+
+.education__container {
+  max-width: 1128px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  margin-top: 28px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.education__container {
+.education__inner {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  margin-top: 28px;
 }
 
 .education__item {
@@ -980,7 +996,7 @@ body {
 
 .footer__inner {
   align-items: center;
-  width: 1128px;
+  max-width: 1128px;
   display: flex;
   margin: 0 auto;
   font-size: 15px;
