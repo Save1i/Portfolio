@@ -163,3 +163,16 @@ const footerDate = document.querySelector(".footer__date");
 const date = new Date().getFullYear();
 
 footerDate.textContent = date;
+
+document.querySelectorAll(".links__small").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const card = this.closest(".works__card");
+    card.classList.add("animate");
+
+    setTimeout(() => {
+      window.open(this.dataset.href, "_blank");
+      card.classList.remove("animate");
+    }, 300); // Должно совпадать с transition
+  });
+});

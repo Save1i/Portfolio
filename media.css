@@ -107,40 +107,14 @@
     height: fit-content;
   }
 
-  .works__card {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.9s ease, box-shadow 0.9s ease;
-  }
-
-  .works__card:has(.works__link:active) {
-    transform: scale(0.95);
+  .works__card.works__bs--small.animate {
     box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
   }
 
-  .works__card:has(.works__img--battleship:active) {
+  .works__card.animate .works__img--battleship {
     width: 78%;
     filter: brightness(90%);
-  }
-
-  /* Скрываем ссылку на 0.9s */
-  .works__link {
-    position: absolute;
-    inset: 0; /* Растягиваем ссылку на весь блок */
-    display: block;
-    z-index: 10;
-    visibility: hidden; /* Скрываем ссылку */
-    animation: showLink 0.9s linear forwards;
-  }
-
-  /* Показываем ссылку после 0.9s */
-  @keyframes showLink {
-    0% {
-      visibility: hidden;
-    }
-    100% {
-      visibility: visible;
-    }
   }
 
   .education__item {
