@@ -161,6 +161,11 @@
     filter: brightness(90%);
   }
 
+  .social__container svg:active path {
+    fill: var(--basic-green-color);
+    transition: fill 0.3s ease;
+  }
+
   .form__btn:active {
     box-shadow: 0 0 20px 5px rgba(0, 153, 51, 0.25), inset 0 0 50px 10px rgba(0, 153, 51, 0.2);
   }
