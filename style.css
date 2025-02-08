@@ -883,7 +883,6 @@ body {
   right: 3px;
   height: 20px;
   width: 174px;
-
   background-color: var(--bg-color);
   cursor: pointer;
   transition: all 0.2s ease;

@@ -232,7 +232,11 @@
   }
 
   .form__btn {
-    margin-top: 20px;
+    margin: 20px 0px 0 0;
+  }
+
+  .form__btn-dec {
+    right: -7px;
   }
 }
 
