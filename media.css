@@ -103,6 +103,15 @@
 }
 
 @media (max-width: 900px) {
+  .header__decor {
+    height: fit-content;
+  }
+
+  .works__card:active.works__bs--small {
+    background-color: #4f46e5;
+    box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
+  }
+
   .education__item {
     max-width: 750px;
   }
@@ -236,6 +245,11 @@
 
   .form__btn-dec {
     right: -7px;
+  }
+
+  .works__card:active.works__bs--small {
+    background-color: #4f46e5;
+    box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
   }
 }
 
