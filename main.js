@@ -173,6 +173,6 @@ document.querySelectorAll(".links__small").forEach((link) => {
     setTimeout(() => {
       window.open(this.dataset.href, "_blank");
       card.classList.remove("animate");
-    }, 400); // Должно совпадать с transition
+    }, 450); // Должно совпадать с transition
   });
 });
