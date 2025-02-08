@@ -107,9 +107,39 @@
     height: fit-content;
   }
 
-  .works__card.works__bs--small .links__big:active {
-    background-color: #4f46e5;
+  .works__card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.9s ease, box-shadow 0.9s ease;
+  }
+
+  .works__card:has(.works__link:active) {
+    transform: scale(0.95);
     box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .works__card:has(.works__img--battleship:active) {
+    width: 78%;
+    filter: brightness(90%);
+  }
+
+  /* Добавляем небольшую задержку перед переходом */
+  .works__link {
+    position: absolute;
+    inset: 0; /* Растягиваем ссылку на весь блок */
+    display: block;
+    z-index: 10;
+    animation: delayLink 0.9s steps(1, end);
+  }
+
+  /* Через 300мс срабатывает переход */
+  @keyframes delayLink {
+    0% {
+      pointer-events: none;
+    } /* Блокируем клик */
+    100% {
+      pointer-events: auto;
+    } /* Разрешаем клик через 0.3s */
   }
 
   .education__item {
