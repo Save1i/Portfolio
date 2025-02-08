@@ -110,6 +110,7 @@
   .works__card.works__bs--small.animate {
     box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    background-color: #4f46e5;
   }
 
   .works__card.animate .works__img--battleship {
@@ -120,6 +121,7 @@
   .works__card.works__sg--big.animate {
     box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    background-color: #d946ef;
   }
 
   .works__card.animate .works__img--sg {
