@@ -171,7 +171,7 @@ document.querySelectorAll(".links__small").forEach((link) => {
     card.classList.add("animate");
 
     setTimeout(() => {
-      window.open(this.dataset.href, "_blank");
+      window.open(this.href, "_blank");
       card.classList.remove("animate");
     }, 450);
   });
