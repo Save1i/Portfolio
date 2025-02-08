@@ -862,20 +862,20 @@ body {
 .item__title {
   font-weight: 400;
   font-size: 24px;
-  color: #475569;
+  color: #64748b;
 }
 
 .item__text {
   font-weight: 400;
   font-size: 24px;
-  color: #1e293b;
+  color: #475569;
   max-width: 486px;
 }
 
 .item__date {
   font-weight: 400;
   font-size: 24px;
-  color: #475569;
+  color: #64748b;
 }
 
 .decor__line {
