@@ -664,6 +664,7 @@ body {
 
 .contact__info-container {
   margin-top: 35px;
+  margin-left: 24px;
 }
 
 .mail__title {
@@ -749,7 +750,6 @@ body {
   font-weight: 300;
   font-size: 22px;
   color: var(--basic-green-color);
-  /* line-height: 20px; */
 }
 
 .form__inp:focus {
@@ -774,11 +774,12 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
+  margin-right: 175px;
 }
 
 .form__btn_inner {
   position: relative;
-  width: 160px;
+  margin-left: auto;
 }
 
 .form__btn:active {
@@ -789,7 +790,7 @@ body {
   position: absolute;
   content: "";
   bottom: 15px;
-  right: 3px;
+  right: 168px;
   height: 20px;
   width: 174px;
   background-color: var(--bg-color);

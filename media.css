@@ -259,6 +259,7 @@
     display: flex;
     gap: 25px;
     align-items: start;
+    margin-left: 0;
   }
 
   .contact__social {
