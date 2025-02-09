@@ -545,6 +545,8 @@
 
   .social__container {
     margin-top: 5px;
+    display: flex;
+    justify-content: center;
   }
 
   .contact__info-container {
