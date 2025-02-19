@@ -381,7 +381,7 @@ body {
 .works__tl--big {
   grid-column: 3/6;
   grid-row: 1/1;
-  background: var(--dark-color);
+  background-color: var(--dark-color);
   border-radius: 15px;
   overflow: hidden;
   transition: all 0.2s ease;
@@ -431,6 +431,13 @@ body {
   display: flex;
   align-items: end;
   padding: 36px;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out, background-color 0.4s ease-in-out;
+
+}
+
+.works__card.card__show {
+  opacity: 1;
 }
 
 .works__info {
@@ -464,7 +471,7 @@ body {
 }
 
 .works__img {
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   position: absolute;
   object-fit: cover;
   object-position: center;

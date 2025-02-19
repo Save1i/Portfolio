@@ -176,3 +176,25 @@ document.querySelectorAll(".links__small").forEach((link) => {
     }, 450);
   });
 });
+
+
+// scroll animation
+
+var options = {
+  threshold: 0.1,
+};
+var callback = function (entries) {
+  entries.forEach(change => {
+    if(change.isIntersecting) {
+      change.target.classList.add("card__show")
+    } else change.target.classList.remove("card__show")
+  })
+
+};
+let observer = new IntersectionObserver(callback, options);
+let element = document.querySelectorAll(".works__card")
+
+element.forEach(el => {
+  observer.observe(el)
+})
+
