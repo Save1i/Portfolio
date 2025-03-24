@@ -125,13 +125,13 @@ form.addEventListener("submit", function (e) {
   document.querySelector(".form__btn").disabled = true;
 
   const formData = {
-    name: form.name.value,
-    mail: form.mail.value,
-    message: form.message.value,
+    Name: form.name.value,
+    Mail: form.mail.value,
+    Message: form.message.value,
   };
 
   fetch(
-    "https://script.google.com/macros/s/AKfycbzPc2LyNhrl2toaKiG9kyEjQK1FtExbOPV4VNPfIAh20i1w8oZeC7CScYKtiCJqPZVX/exec",
+    "https://script.google.com/macros/s/AKfycbyYn-2RKtmQOU5ZuUqAY3RqjSYGKMqcOBpjJF1Cl1kHizJLkkovqV3o5RHv-1Oqc70u3A/exec",
     {
       method: "POST",
       contentType: "application/json",
@@ -177,24 +177,21 @@ document.querySelectorAll(".links__small").forEach((link) => {
   });
 });
 
-
 // scroll animation
 
 var options = {
   threshold: 0.1,
 };
 var callback = function (entries) {
-  entries.forEach(change => {
-    if(change.isIntersecting) {
-      change.target.classList.add("card__show")
-    } else change.target.classList.remove("card__show")
-  })
-
+  entries.forEach((change) => {
+    if (change.isIntersecting) {
+      change.target.classList.add("card__show");
+    } else change.target.classList.remove("card__show");
+  });
 };
 let observer = new IntersectionObserver(callback, options);
-let element = document.querySelectorAll(".works__card")
+let element = document.querySelectorAll(".works__card");
 
-element.forEach(el => {
-  observer.observe(el)
-})
-
+element.forEach((el) => {
+  observer.observe(el);
+});
