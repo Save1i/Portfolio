@@ -364,7 +364,7 @@ body {
   margin-top: 38px;
   display: grid;
   grid-template-columns: repeat(5, 226px);
-  grid-template-rows: repeat(3, 600px);
+  grid-template-rows: repeat(4, 600px);
   row-gap: 24px;
   justify-content: center;
 }
@@ -436,6 +436,26 @@ body {
   margin-right: 24px;
 }
 
+/* ////////////////////////////////////////////////// */
+.works__es--big {
+  grid-column: 1/4;
+  grid-row: 4/5;
+  background: var(--dark-color);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.works__rl--small {
+  grid-column: 4 / 6;
+  grid-row: 4/5;
+  background-color: var(--dark-color);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  margin-left: 24px;
+}
+
 .works__card {
   position: relative;
   z-index: 999;
@@ -443,7 +463,11 @@ body {
   align-items: end;
   padding: 36px;
   opacity: 0;
-  transition: opacity 0.8s ease-in-out, background-color 0.4s ease-in-out;
+  transition: 
+    opacity 0.8s ease-in-out,
+    background-color 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out;
+
 
 }
 
@@ -466,7 +490,7 @@ body {
 .works__info-main {
   display: flex;
   justify-content: space-between;
-  gap: 65px;
+  gap: 30px;
 }
 
 .info__text {
@@ -476,9 +500,10 @@ body {
 }
 
 .works__info-title {
-  font-size: 36px;
+  font-size: 34px;
   font-weight: 700;
   color: var(--bg-color);
+  margin-right: 10px;
 }
 
 .works__img {
@@ -487,6 +512,7 @@ body {
   object-fit: cover;
   object-position: center;
   filter: brightness(80%);
+  transition: width 0.4s ease, filter 0.4s ease;
 }
 
 .works__img--battleship {
@@ -544,13 +570,24 @@ body {
   object-position: left;
 }
 
-.works__img--mc {
+.works__img--es {
   border-top-left-radius: 15px;
   position: absolute;
   bottom: 0;
   right: 0;
   object-fit: cover;
   width: 84%;
+  height: 89%;
+  object-position: left;
+}
+
+.works__img--rl {
+  border-top-left-radius: 15px;
+  position: absolute;
+  bottom: 0;
+  right: -25px;
+  object-fit: cover;
+  width: 65%;
   height: 89%;
   object-position: left;
 }
@@ -1008,6 +1045,25 @@ body {
   .about__contact-btn:hover {
     box-shadow: 0 0 20px 5px rgba(0, 153, 51, 0.25), inset 0 0 50px 10px rgba(0, 153, 51, 0.2);
   }
+
+  .works__card:hover .works__img--rl {
+    width: 68%;
+    filter: brightness(90%);
+  }
+  .works__card:hover.works__rl--small {
+    background-color: #4f46e5;
+    box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .works__card:hover.works__es--big {
+    background-color: #4f46e5;
+    box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
+  }
+  .works__card:hover .works__img--es {
+    width: 86%;
+    filter: brightness(90%);
+  }
+  
 
   .social__container svg:hover path {
     fill: var(--basic-green-color);
