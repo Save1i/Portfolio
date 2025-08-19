@@ -110,7 +110,7 @@ document.querySelector(".mail__text").addEventListener("click", function () {
   navigator.clipboard
     .writeText(textToCopy)
     .then(() => {
-      this.textContent = "Скопировано!";
+      this.textContent = "copied!";
       setTimeout(() => (this.textContent = textToCopy), 2000);
     })
     .catch((err) => console.error("Ошибка при копировании:", err));
