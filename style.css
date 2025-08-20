@@ -1484,7 +1484,7 @@ body {
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.2s ease;
-    margin-right: 0px;
+    margin-left: 0px;
   }
 
   .works__card {
