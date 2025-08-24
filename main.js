@@ -195,3 +195,73 @@ let element = document.querySelectorAll(".works__card");
 element.forEach((el) => {
   observer.observe(el);
 });
+
+///////// ANIMATION
+
+
+// Берём контейнер из HTML
+const $container = document.querySelector('.container');
+const color = getComputedStyle($container).color;
+const { width, height } = $container.getBoundingClientRect();
+
+// Three.js setup
+const renderer = new THREE.WebGLRenderer({ alpha: true });
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(100, width / height, 0.5, 40);
+const geometry = new THREE.BoxGeometry(1, 1, 1);
+const material = new THREE.MeshBasicMaterial({ color: "#009933", wireframe: true });
+
+
+renderer.setSize(width, height);
+renderer.setPixelRatio(window.devicePixelRatio);
+$container.appendChild(renderer.domElement);
+camera.position.z = 5;
+
+// Хранилище кубов
+const cubes = [];
+
+// Создание анимированного куба
+function createAnimatedCube() {
+  const cube = new THREE.Mesh(geometry, material);
+
+  cube.position.set(
+    anime.random(-10, 10),
+    anime.random(-5, 5),
+    anime.random(-10, 7)
+  );
+
+  scene.add(cube);
+  cubes.push(cube);
+
+  // Анимация позиции и вращения с помощью anime.js
+  anime.timeline({
+    loop: true,
+    duration: 4000,
+    easing: 'easeInSine',
+    delay: anime.random(0, 4000)
+  })
+    .add({
+      targets: cube.position,
+      x: anime.random(-10, 10),
+      y: anime.random(-5, 5),
+      z: anime.random(-10, 7)
+    }, 0)
+    .add({
+      targets: cube.rotation,
+      x: () => anime.random(-Math.PI * 2, Math.PI * 2),
+      y: () => anime.random(-Math.PI * 2, Math.PI * 2),
+      z: () => anime.random(-Math.PI * 2, Math.PI * 2)
+    }, 0);
+}
+
+// Создаём 40 кубов
+for (let i = 0; i < 40; i++) {
+  createAnimatedCube();
+}
+
+// Рендерим
+function render() {
+  renderer.render(scene, camera);
+}
+
+renderer.setAnimationLoop(render);

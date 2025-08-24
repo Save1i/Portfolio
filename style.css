@@ -364,7 +364,7 @@ body {
   margin-top: 38px;
   display: grid;
   grid-template-columns: repeat(5, 226px);
-  grid-template-rows: repeat(4, 600px);
+  grid-template-rows: repeat(5, 600px);
   row-gap: 24px;
   justify-content: center;
 }
@@ -437,7 +437,8 @@ body {
 }
 
 /* ////////////////////////////////////////////////// */
-.works__es--big {
+
+.works__wd--big {
   grid-column: 1/4;
   grid-row: 4/5;
   background: var(--dark-color);
@@ -454,6 +455,25 @@ body {
   overflow: hidden;
   transition: all 0.2s ease;
   margin-left: 24px;
+}
+
+.works__et--small {
+  grid-column: 4 / 6;
+  grid-row: 5/6;
+  background-color: var(--dark-color);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  margin-left: 24px;
+}
+
+.works__es--big {
+  grid-column: 1/4;
+  grid-row: 5/6;
+  background: var(--dark-color);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.2s ease;
 }
 
 .works__card {
@@ -570,13 +590,13 @@ body {
   object-position: left;
 }
 
-.works__img--es {
+.works__img--wd {
   border-top-left-radius: 15px;
   position: absolute;
   bottom: 0;
   right: 0;
   object-fit: cover;
-  width: 84%;
+  width: 52%;
   height: 89%;
   object-position: left;
 }
@@ -591,6 +611,18 @@ body {
   height: 89%;
   object-position: left;
 }
+
+.works__img--es {
+  border-top-left-radius: 15px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+  width: 84%;
+  height: 89%;
+  object-position: left;
+}
+
 
 .about {
   margin-top: 110px;
@@ -1055,6 +1087,15 @@ body {
     box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
   }
 
+  .works__card:hover.works__wd--big {
+    background-color: #16a34a;
+    box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
+  }
+  .works__card:hover .works__img--wd {
+    width: 54%;
+    filter: brightness(90%);
+  }
+
   .works__card:hover.works__es--big {
     background-color: #4f46e5;
     box-shadow: inset 5px -60px 80px 5px rgba(0, 0, 0, 0.2);
@@ -1480,6 +1521,15 @@ body {
   .works__rl--small {
     grid-column: 1 / 1;
     grid-row: 8/9;
+    background-color: var(--dark-color);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    margin-left: 0px;
+  }
+  .works__et--small {
+    grid-column: 1 / 1;
+    grid-row: 9/10;
     background-color: var(--dark-color);
     border-radius: 15px;
     overflow: hidden;
